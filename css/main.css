@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Raleway&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: #f2f2f2;
+}
+
+.main-header {
+  display: flex;
+  position: fixed;
+  width: 1,2vw;
+  background-color: #333333;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.main-header .brand {
+  font-size: 1.0rem;
+  font-weight: bold;
+  padding: 2rem;
+}
+.main-header .main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 1rem;
+}
+.main-nav .nav-link {
+  list-style: none;
+  padding: 0.5rem;
+  opacity: 0;
+}
+.main-header a{
+  display: flexbox;
+  font-size: small;
+  padding: 1.0rem;
+}
+.nav-link a {
+  text-decoration: none;
+  font-size: 0.5rem;
+  color: #f2f2f2;
+}
+
+section {
+  min-height: 100vh;
+}
+
+.title-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272727;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+.title-header {
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+.title-header .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1rem;
+  padding-right: 0.05rem;
+  padding-bottom: 0.15rem;
+  line-height: 1rem;
+}
+.title-header .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background-color: #f2f2f2;
+  transform-origin: 0.5 0;
+}
+.title-header .letters {
+  display: inline-block;
+  opacity: 0;
+}
+
+.hero-section {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+.hero-section img {
+  width: 100%;
+  height: 720px;
+}
+.hero-section .hero-title {
+  position: absolute;
+  bottom: 70%;
+  right: 0%;
+  font-family: "Lobster";
+  font-size: 3rem;
+  color: #a405b3;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 5000ms ease-in-out;
+}
+.hero-section svg {
+  font-family: "Lobster";
+  font-size: 0.8rem;
+  font-weight: bold;
+
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.hero-section svg text {
+  transition: ease-in-out 3s;
+  transform-origin: center;
+}
+.hero-section svg rect {
+  mask: url(#mask);
+}
+.hero-section svg mask rect {
+  fill: white;
+}
+
+.article-section {
+  display: flexbox;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  grid-gap: 2rem;
+  padding: 1rem;
+  background-color: #272727;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+}
+.article {
+  display: flex;
+  background-color: #dadada;
+  color: #272727;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+}
+.article img {
+  width: 100%;
+  transition: all ease-in-out 1.0s;
+}
+.article-body h3 {
+  font-size: 1.4  rem;
+  margin-bottom: 2rem;
+  transition: all ease-in-out 1.0s;
+}
+.article .article-body {
+  padding: 1rem;
+  text-align: justify;
+  transition: all ease-in-out 1.0s;
+}
+
+.article:hover img {
+  transform: scale(1.1);
+}
+.article:hover h3 {
+  transform: translateY(-1.0em);
+}
+.article:hover .article-body {
+  transform: translateY(1.0em);
+}
